@@ -29,14 +29,16 @@ RSpec.describe HanoiGame do
 
   describe '#won?' do
     it 'correctly identifies a winning position' do
-      game.towers = [[],[3,2,1],[]]
+      allow(game).to receive(:towers).and_return([[],[3,2,1],[]])
+      # game.towers = [[],[3,2,1],[]]
       expect(game).to be_won
     end
     it 'correctly rejects starting position as a winning position' do
       expect(game).not_to be_won
     end
     it 'correctly rejects mid-game position' do
-      game.towers = [[],[2,1],[3]]
+      allow(game).to receive(:towers).and_return([[],[2,1],[3]])
+      # game.towers = [[],[2,1],[3]]
       expect(game).not_to be_won
     end
   end

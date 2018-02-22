@@ -22,7 +22,7 @@ RSpec.describe Array do
     context 'if array has no matches' do
       subject(:arr) { [-3, 1, 0] }
       it 'returns an empty array' do
-        expect(arr.two_sum).to eq([])
+        expect(arr.two_sum).to be_empty
       end
 
     end

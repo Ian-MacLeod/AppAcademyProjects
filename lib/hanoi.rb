@@ -1,6 +1,6 @@
 class HanoiGame
 
-  attr_accessor :towers
+  attr_reader :towers
 
   def initialize
     @towers = [[3,2,1],[],[]]
