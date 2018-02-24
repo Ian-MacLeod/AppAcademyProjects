@@ -8,19 +8,32 @@ class HashSet
     @count = 0
   end
 
-  def insert(key)
+  def insert(object)
+    resize! if count >= num_buckets
+    bucket = self[object]
+    unless bucket.include?(object)
+      bucket << object
+      @count += 1
+    end
   end
 
-  def include?(key)
+  def remove(object)
+    bucket = self[object]
+    if bucket.include?(object)
+      bucket.delete(object)
+      @count -= 1
+    end
   end
 
-  def remove(key)
+  def include?(object)
+    bucket = self[object]
+    bucket.include?(object)
   end
 
   private
 
-  def [](num)
-    # optional but useful; return the bucket corresponding to `num`
+  def [](object)
+    @store[object.hash % num_buckets]
   end
 
   def num_buckets
