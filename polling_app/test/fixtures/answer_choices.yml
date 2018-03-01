@@ -1,11 +1,12 @@
 # == Schema Information
 #
-# Table name: users
+# Table name: answer_choices
 #
-#  id         :integer          not null, primary key
-#  user_name  :string           not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id          :integer          not null, primary key
+#  question_id :integer          not null
+#  choice      :text             not null
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

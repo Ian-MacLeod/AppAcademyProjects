@@ -1,16 +1,17 @@
 # == Schema Information
 #
-# Table name: users
+# Table name: questions
 #
 #  id         :integer          not null, primary key
-#  user_name  :string           not null
+#  poll_id    :integer          not null
+#  text       :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 require 'test_helper'
 
-class UserTest < ActiveSupport::TestCase
+class QuestionTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

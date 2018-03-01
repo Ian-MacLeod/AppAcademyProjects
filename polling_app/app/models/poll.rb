@@ -1,12 +1,13 @@
 # == Schema Information
 #
-# Table name: users
+# Table name: polls
 #
 #  id         :integer          not null, primary key
-#  user_name  :string           not null
+#  author_id  :integer          not null
+#  title      :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class User < ApplicationRecord
+class Poll < ApplicationRecord
 end
