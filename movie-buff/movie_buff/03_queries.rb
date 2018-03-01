@@ -1,24 +1,46 @@
 def what_was_that_one_with(those_actors)
   # Find the movies starring all `those_actors` (an array of actor names).
   # Show each movie's title and id.
-
+  Movie
+    .select(:title, :id)
+    .joins(:actors)
+    .where('actors.name' => those_actors)
+    .group('movies.id')
+    .having('COUNT(*) = 2')
 end
 
 def golden_age
   # Find the decade with the highest average movie score.
-
+  Movie
+    .select('((yr/10)*10) AS decade')
+    .group('(yr/10)')
+    .order('AVG(score) DESC')
+    .limit(1)
+    .first['decade']
 end
 
 def costars(name)
   # List the names of the actors that the named actor has ever
   # appeared with.
   # Hint: use a subquery
+  movie_ids = Movie
+    .joins(:actors)
+    .where('actors.name' => name)
+    .pluck(:id)
 
+  Actor
+    .joins(:castings)
+    .where('castings.movie_id' => movie_ids)
+    .where.not(name: name)
+    .pluck(:name).uniq
 end
 
 def actor_out_of_work
   # Find the number of actors in the database who have not appeared in a movie
-
+  Actor
+    .includes(:movies)
+    .where('movies.id' => nil)
+    .length
 end
 
 def starring(whazzername)
@@ -28,7 +50,8 @@ def starring(whazzername)
 
   # ex. "Sylvester Stallone" is like "sylvester" and "lester stone" but
   # not like "stallone sylvester" or "zylvester ztallone"
-
+  whazzername = whazzername.downcase.chars.join('%')
+  Movie.joins(:actors).where("LOWER(actors.name) LIKE ?", "%#{whazzername}%")
 end
 
 def longest_career
@@ -36,5 +59,11 @@ def longest_career
   # (the greatest time between first and last movie).
   # Order by actor names. Show each actor's id, name, and the length of
   # their career.
-
+  Actor
+    .select(:id, :name, 'MAX(movies.yr) - MIN(movies.yr) AS career')
+    .joins(:movies)
+    .group(:id)
+    .order('MAX(movies.yr) - MIN(movies.yr) DESC')
+    .order(:name)
+    .limit(3)
 end
