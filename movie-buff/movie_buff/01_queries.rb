@@ -45,7 +45,7 @@ def biggest_cast
   Movie
     .select(:id, :title)
     .joins(:actors)
-    .group('movies.id')
+    .group(:id)
     .order('COUNT(actors.id) DESC')
     .limit(3)
 end
@@ -66,7 +66,7 @@ def directed_by_one_of(them)
   Movie
     .select(:id, :title)
     .joins(:director)
-    .where("actors.name" => them)
+    .where(actors: {name: them})
 end
 
 def movie_names_before_1940
