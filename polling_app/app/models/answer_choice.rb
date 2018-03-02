@@ -22,4 +22,8 @@ class AnswerChoice < ApplicationRecord
            primary_key: :id,
            foreign_key: :answer_choice_id
 
+  has_one :author,
+          through: :question,
+          source: :author
+
 end

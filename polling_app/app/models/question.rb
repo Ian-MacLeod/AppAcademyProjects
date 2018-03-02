@@ -21,4 +21,39 @@ class Question < ApplicationRecord
              class_name: :Poll,
              primary_key: :id,
              foreign_key: :poll_id
+
+  has_many :responses,
+           through: :answer_choices,
+           source: :responses
+
+  has_one :author,
+          through: :poll,
+          source: :author
+
+  def results_good
+    AnswerChoice
+      .select(:choice, 'COUNT(id)')
+      .left_outer_joins(:responses)
+      .where(question_id: self.id)
+      .group(:id)
+  end
+
+  def results_medium
+    answers = self.answer_choices.includes(:responses)
+    answer_counts = {}
+    answers.each do |answer|
+      answer_counts[answer.choice] = answer.responses.length
+    end
+    answer_counts
+  end
+
+  def results_bad
+    answers = self.answer_choices
+    answer_counts = {}
+    answers.each do |answer|
+      answer_counts[answer.choice] = answer.responses.length
+    end
+    answer_counts
+  end
+
 end
