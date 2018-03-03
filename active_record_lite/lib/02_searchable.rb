@@ -1,8 +1,13 @@
 require_relative 'db_connection'
 require_relative '01_sql_object'
+require_relative 'relation'
 
 module Searchable
   def where(params)
+    Relation.new(self, params)
+  end
+
+  def where!(params)
     cols, vals = params.to_a.transpose
     where_cols = cols.join(' = ? AND ') + ' = ?'
     data = DBConnection.execute(<<-SQL, *vals)
@@ -13,7 +18,7 @@ module Searchable
     WHERE
       #{where_cols}
     SQL
-    data.map { |datum| self.new(datum) }
+    parse_all(data)
   end
 end
 

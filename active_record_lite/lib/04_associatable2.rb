@@ -26,7 +26,7 @@ module Associatable
         #{through_table}.id = ?
       SQL
 
-      model_class.new(data.first)
+      model_class.parse_all(data).first
     end
   end
 end
