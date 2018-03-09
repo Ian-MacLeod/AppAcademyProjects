@@ -3,6 +3,7 @@
 <p>Band: <%= @track.band.name %></p>
 <p>Album: <%= @track.album.title %></p>
 <p>Type: <%= @track.is_bonus ? "Bonus" : "Regular" %></p>
+<%= ugly_lyrics(@track.lyrics) %>
 <a href="<%= edit_track_url %>">Edit Track</a>
 <form action="<% track_url(@track) %>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
