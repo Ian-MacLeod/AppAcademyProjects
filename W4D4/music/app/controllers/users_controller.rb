@@ -12,6 +12,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      mail = UserMailer.welcome_emaill(@user)
+      mail.deliver_now
       log_in!(@user)
       redirect_to bands_url
     else
