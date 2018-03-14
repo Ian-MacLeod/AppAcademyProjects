@@ -4,7 +4,7 @@ require_relative '../lib/controller_base'
 class MyController < ControllerBase
   def go
     session["count"] ||= 0
-    session["count"] += 1
+    session["count"] += 1 if [0, 1].sample == 1
     render :counting_show
   end
 end
