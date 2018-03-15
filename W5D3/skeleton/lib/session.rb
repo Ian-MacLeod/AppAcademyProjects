@@ -6,11 +6,10 @@ class Session
   attr_reader :modified
 
   def initialize(req)
+    @modified = false
+    @data = {}
     if req.cookies.key?('_rails_lite_app')
       @data = JSON.parse(req.cookies['_rails_lite_app'])
-      @modified = false
-    else
-      @data = {}
     end
   end
 
