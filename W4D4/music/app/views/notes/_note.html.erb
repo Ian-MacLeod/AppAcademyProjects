@@ -1,0 +1,12 @@
+<article class="note">
+  <h4><%= idx %>. <%= note.user.email %></h4>
+  <p><%= time_ago_in_words(note.created_at) %> ago</p>
+  <p><%= note.text %></p>
+  <% if note.user_id == current_user.id %>
+    <form action="<%= note_url(note) %>" method="post">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <input type="hidden" name="_method" value="delete">
+      <button>Delete Note</button>
+    </form>
+  <% end %>
+</article>

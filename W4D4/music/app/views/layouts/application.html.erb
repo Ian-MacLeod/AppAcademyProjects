@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Music</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <header>
+      <h1>Music App</h1>
+      <% if logged_in? %>
+        <p>Hello <%= current_user.email %></p>
+        <form action="<%= session_url %>" method="post">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+          <input type="hidden" name="_method" value="delete">
+          <button>Log Out</button>
+        </form>
+      <% else %>
+        <a href="<%= new_session_url %>">Log In</a>
+        <a href="<%= new_user_url %>">Sign Up</a>
+      <% end %>
+    </header>
+    <% if flash.key?(:errors) %>
+      <% flash[:errors].each do |error| %>
+        <div class="error"><%= error %></div>
+      <% end %>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

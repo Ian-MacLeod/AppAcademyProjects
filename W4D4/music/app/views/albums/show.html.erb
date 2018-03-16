@@ -1,0 +1,19 @@
+<h2><%= @album.title %></h2>
+<p>Year: <%= @album.year %></p>
+<p>Band: <%= @album.band.name %></p>
+<p>Type: <%= @album.is_live ? "Live" : "Studio" %></p>
+<a href="<%= edit_album_url %>">Edit Album</a>
+<form action="<% album_url(@album) %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="delete">
+  <button>Delete Album</button>
+</form>
+<a href="<%= band_url(@album.band) %>">View Band</a>
+
+<h3>Tracks</h3>
+<ul>
+<% @album.tracks.sort_by(&:ord).each do |track| %>
+  <li><a href="<%= track_url(track) %>"><%= track.title %></a></li>
+<% end %>
+</ul>
+<a href="<%= new_album_track_url(@album) %>">Add a track</a>
