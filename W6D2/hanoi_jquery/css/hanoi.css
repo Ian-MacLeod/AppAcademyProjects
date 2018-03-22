@@ -1,0 +1,36 @@
+body {
+  font-family: sans-serif;
+}
+
+body, h1, figure, div, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  text-align: center;
+  margin: 40px;
+}
+
+.hanoi-board {
+  display: flex;
+  justify-content: center;
+
+}
+
+.hanoi-board ul{
+  border-bottom: 5px solid black;
+  width: 200px;
+  margin: 0 10px;
+  height: 300px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hanoi-board 
