@@ -1,0 +1,34 @@
+<% if album.persisted? %>
+  <% action_url = album_url(album) %>
+  <% submit_string = "Edit Album" %>
+<% else %>
+  <% action_url = albums_url %>
+  <% submit_string = "Create Album" %>
+<% end %>
+
+<form class="" action="<%= action_url %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <% if album.persisted? %>
+    <input type="hidden" name="_method" value="patch">
+  <% end %>
+  <label>Title
+    <input type="text" name="album[title]" value="<%= album.title %>">
+  </label>
+  <label>Band
+    <select name="album[band_id]">
+      <% bands.each do |band| %>
+        <option value="<%= band.id %>" <%= "selected" if album.band_id == band.id %>><%=band.name%></option>
+      <% end %>
+    </select>
+  </band>
+  <label>Year
+    <input type="text" name="album[year]" value="<%= album.year %>">
+  </label>
+  <label>Live
+    <input type="radio" name="album[is_live]" value="true" <%= "checked" if album.is_live %>>
+  </label>
+  <label>Studio
+    <input type="radio" name="album[is_live]" value="false" <%= "checked" unless album.is_live %>>
+  </label>
+  <input type="submit" value="<%= submit_string %>">
+</form>
