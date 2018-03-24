@@ -1,0 +1,7 @@
+{
+  "name": "ajax_twitter",
+  "private": true,
+  "dependencies": {
+    "webpack": "^4.2.0"
+  }
+}

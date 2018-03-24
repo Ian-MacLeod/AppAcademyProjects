@@ -1,0 +1,23 @@
+.sections-nav {
+  position: absolute;
+  top:100%;
+  border-bottom: 1px solid $light-gray;
+  width: 100%
+}
+
+.sections-nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+.sections-nav li {
+  margin: 10px;
+}
+
+.sections-nav a:hover {
+  background-color: $light-gray;
+}
+
+.sections-nav li:last-child {
+  text-decoration: underline;
+}
