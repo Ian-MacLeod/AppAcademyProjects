@@ -1,0 +1,82 @@
+ul, li, h1, h2, h3, div, article, section, p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: sans-serif;
+}
+
+
+.widget-clock {
+  font-family: 'Arvo', serif;
+  background: #61C9A8;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid black;
+}
+
+h1 {
+  font-family: 'Patua One', cursive;
+  letter-spacing: 2px;
+}
+
+.widget-clock section:last-child {
+  text-align: right;
+}
+
+.widget-tabs {
+
+}
+.widget-tabs article {
+  background-color: #DB504A;
+  border: 2px solid black;
+  border-top: none;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.widget-tabs h1 {
+  font-family: sans-serif;
+}
+
+.widget-tabs ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.widget-tabs ul li {
+  background-color: #DB504A;
+  border-radius: 5px 5px 0 0;
+  border: 2px solid black;
+  border-right: none;
+  flex: 1;
+  text-align: center;
+}
+
+.widget-tabs ul li.selected {
+  border-bottom: none;
+}
+
+.widget-tabs ul li:last-child {
+  border-right: 2px solid black;
+}
+
+.widget-tabs ul li:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.widget-weather {
+  background-color: #6A687A;
+  border: 2px solid black;
+  padding: 20px;
+  text-align: center;
+  font-size: 28px;
+  color: white;
+}
