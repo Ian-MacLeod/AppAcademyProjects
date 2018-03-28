@@ -1,2 +1,5 @@
-
-export const fetchAllPokemon = () => 
+export const fetchAllPokemon = () =>
+  $.ajax({
+    url: "/api/pokemons/",
+    method: "GET"
+  });
