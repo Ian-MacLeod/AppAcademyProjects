@@ -1,8 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default ({ pokemon }) => (
-  <li>
-    <p>{pokemon.name}</p>
-    <img src={pokemon.image_url} />
-  </li>
+  <Link to={`/pokemon/${pokemon.id}`}>
+    <li>
+      <img src={pokemon.image_url} />
+      <p>{pokemon.name}</p>
+    </li>
+  </Link>
 );

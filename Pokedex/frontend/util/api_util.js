@@ -3,3 +3,9 @@ export const fetchAllPokemon = () =>
     url: "/api/pokemons/",
     method: "GET"
   });
+
+export const fetchPokemonDetail = id =>
+  $.ajax({
+    url: `/api/pokemons/${id}`,
+    method: "GET"
+  });
