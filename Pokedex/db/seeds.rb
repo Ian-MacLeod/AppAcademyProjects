@@ -1379,9 +1379,7 @@ ActiveRecord::Base.transaction do
 
   pokemon = pokemon.map do |num, stats|
     stats['image_url'] = "#{num}.svg"
-    stats['id'] = num
     stats
-
   end
 
   Pokemon.create!(pokemon)

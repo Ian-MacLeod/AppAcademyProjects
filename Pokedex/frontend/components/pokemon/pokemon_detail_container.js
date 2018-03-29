@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  fetchPokemonDetails: () => dispatch(fetchPokemonDetails(ownProps.pokemonId))
+  fetchPokemonDetails: (pokemonId) => dispatch(fetchPokemonDetails(pokemonId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PokemonDetail);
