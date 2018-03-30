@@ -1381,10 +1381,15 @@ ActiveRecord::Base.transaction do
     stats['image_url'] = "#{num}.svg"
     stats
   end
-
   Pokemon.create!(pokemon)
+  ActiveRecord::Base.connection.execute("SELECT setval('pokemons_id_seq', 151)")
+
 
   Pokemon.all.each do |pokemon|
     3.times { create_random_item!(pokemon) }
   end
+
 end
+
+
+  p "hello"

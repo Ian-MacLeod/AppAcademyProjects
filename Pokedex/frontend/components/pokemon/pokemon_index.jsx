@@ -7,7 +7,6 @@ class PokemonIndex extends React.Component {
   }
 
   render() {
-    debugger;
     if (this.props.pokemons.length === 0) return <div className="loading" />;
     return (
       <ul className="pokemon-index">

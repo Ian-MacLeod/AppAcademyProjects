@@ -43065,7 +43065,6 @@ var PokemonIndex = function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      debugger;
       if (this.props.pokemons.length === 0) return _react2.default.createElement("div", { className: "loading" });
       return _react2.default.createElement(
         "ul",
@@ -43104,11 +43103,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = function (_ref) {
   var pokemon = _ref.pokemon;
   return _react2.default.createElement(
-    _reactRouterDom.Link,
-    { to: "/pokemon/" + pokemon.id },
+    "li",
+    null,
     _react2.default.createElement(
-      "li",
-      null,
+      _reactRouterDom.Link,
+      { to: "/pokemon/" + pokemon.id },
       _react2.default.createElement("img", { src: pokemon.image_url }),
       _react2.default.createElement(
         "p",
