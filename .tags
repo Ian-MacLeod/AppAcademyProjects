@@ -1,0 +1,22 @@
+html	/Users/appacademy/Desktop/W6D5/widgets/index.html	/^<html lang="en" dir="ltr">$/;"	function	line:2
+head	/Users/appacademy/Desktop/W6D5/widgets/index.html	/^  <head>$/;"	function	line:3
+meta	/Users/appacademy/Desktop/W6D5/widgets/index.html	/^    <meta charset="utf-8">$/;"	function	line:4
+script	/Users/appacademy/Desktop/W6D5/widgets/index.html	/^    <script src="bundle.js"><\/script>$/;"	function	line:5
+link	/Users/appacademy/Desktop/W6D5/widgets/index.html	/^    <link href="frontend\/index.css" rel="stylesheet">$/;"	function	line:6
+link	/Users/appacademy/Desktop/W6D5/widgets/index.html	/^    <link href="https:\/\/fonts.googleapis.com\/css?family=Arvo|Patua+One" rel="stylesheet">$/;"	function	line:7
+title	/Users/appacademy/Desktop/W6D5/widgets/index.html	/^    <title><\/title>$/;"	function	line:8
+body	/Users/appacademy/Desktop/W6D5/widgets/index.html	/^  <body>$/;"	function	line:10
+div	/Users/appacademy/Desktop/W6D5/widgets/index.html	/^    <div id="main">$/;"	function	line:11
+ul, li, h1, h2, h3, div, article, section, p	/Users/appacademy/Desktop/W6D5/widgets/frontend/index.css	/^ul, li, h1, h2, h3, div, article, section, p {$/;"	function	line:1
+.widget-clock	/Users/appacademy/Desktop/W6D5/widgets/frontend/index.css	/^.widget-clock {$/;"	function	line:9
+h1	/Users/appacademy/Desktop/W6D5/widgets/frontend/index.css	/^h1 {$/;"	function	line:21
+.widget-clock section:last-child	/Users/appacademy/Desktop/W6D5/widgets/frontend/index.css	/^.widget-clock section:last-child {$/;"	function	line:26
+.widget-tabs	/Users/appacademy/Desktop/W6D5/widgets/frontend/index.css	/^.widget-tabs {$/;"	function	line:30
+.widget-tabs article	/Users/appacademy/Desktop/W6D5/widgets/frontend/index.css	/^.widget-tabs article {$/;"	function	line:33
+.widget-tabs h1	/Users/appacademy/Desktop/W6D5/widgets/frontend/index.css	/^.widget-tabs h1 {$/;"	function	line:42
+.widget-tabs ul	/Users/appacademy/Desktop/W6D5/widgets/frontend/index.css	/^.widget-tabs ul {$/;"	function	line:46
+.widget-tabs ul li	/Users/appacademy/Desktop/W6D5/widgets/frontend/index.css	/^.widget-tabs ul li {$/;"	function	line:52
+.widget-tabs ul li.selected	/Users/appacademy/Desktop/W6D5/widgets/frontend/index.css	/^.widget-tabs ul li.selected {$/;"	function	line:61
+.widget-tabs ul li:last-child	/Users/appacademy/Desktop/W6D5/widgets/frontend/index.css	/^.widget-tabs ul li:last-child {$/;"	function	line:65
+.widget-tabs ul li:hover	/Users/appacademy/Desktop/W6D5/widgets/frontend/index.css	/^.widget-tabs ul li:hover {$/;"	function	line:69
+.widget-weather	/Users/appacademy/Desktop/W6D5/widgets/frontend/index.css	/^.widget-weather {$/;"	function	line:75

@@ -1,0 +1,16 @@
+body	/Users/appacademy/Desktop/W6D2/ttt_jquery/css/ttt.css	/^body {$/;"	function	line:1
+ul, li, h1, div, body, figure	/Users/appacademy/Desktop/W6D2/ttt_jquery/css/ttt.css	/^ul, li, h1, div, body, figure {$/;"	function	line:5
+ul, ol	/Users/appacademy/Desktop/W6D2/ttt_jquery/css/ttt.css	/^ul, ol {$/;"	function	line:9
+h1	/Users/appacademy/Desktop/W6D2/ttt_jquery/css/ttt.css	/^h1 {$/;"	function	line:13
+.cf:after	/Users/appacademy/Desktop/W6D2/ttt_jquery/css/ttt.css	/^.cf:after {$/;"	function	line:19
+.game	/Users/appacademy/Desktop/W6D2/ttt_jquery/css/ttt.css	/^.game {$/;"	function	line:25
+.game li	/Users/appacademy/Desktop/W6D2/ttt_jquery/css/ttt.css	/^.game li {$/;"	function	line:31
+.game li:hover	/Users/appacademy/Desktop/W6D2/ttt_jquery/css/ttt.css	/^.game li:hover {$/;"	function	line:45
+.game .moved	/Users/appacademy/Desktop/W6D2/ttt_jquery/css/ttt.css	/^.game .moved {$/;"	function	line:50
+.over .game li	/Users/appacademy/Desktop/W6D2/ttt_jquery/css/ttt.css	/^.over .game li {$/;"	function	line:54
+.over .game .winner	/Users/appacademy/Desktop/W6D2/ttt_jquery/css/ttt.css	/^.over .game .winner {$/;"	function	line:59
+.ttt p	/Users/appacademy/Desktop/W6D2/ttt_jquery/css/ttt.css	/^.ttt p {$/;"	function	line:64
+constructor	/Users/appacademy/Desktop/W6D2/ttt_jquery/js/ttt-view.js	/^  constructor(game, $el) {$/;"	function	line:2
+bindEvents	/Users/appacademy/Desktop/W6D2/ttt_jquery/js/ttt-view.js	/^  bindEvents() {$/;"	function	line:9
+makeMove	/Users/appacademy/Desktop/W6D2/ttt_jquery/js/ttt-view.js	/^  makeMove($square) {$/;"	function	line:17
+setupBoard	/Users/appacademy/Desktop/W6D2/ttt_jquery/js/ttt-view.js	/^  setupBoard() {$/;"	function	line:54
